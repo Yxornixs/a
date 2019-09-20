@@ -1,13 +1,8 @@
 const fs = require("fs");
 
-fs.writefile(
-  "./texto.txt",
-  "ejemplo de escritura en archivo Arquitectura web",
-  function(err) {
-    if (err) {
-      console.log(err);
-    }
-    console.log("Archivo Creado");
-  }
-);
-console.log("ultima linea de codigo");
+fs.writeFile("./archivo1.txt", "línea 1\nLínea 2", error => {
+  if (error) console.log(error);
+  else console.log("El archivo fue creado");
+});
+
+console.log("última línea del programa");
